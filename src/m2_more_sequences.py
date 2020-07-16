@@ -330,9 +330,7 @@ def is_palindrome(s):
     first = 0
     last = len(s) - 1
     for k in range(len(s) // 2):
-        if s[first + k] == s[last - k]:
-            pass
-        else:
+        if s[first + k] != s[last - k]:
             return False
     return True
     # ------------------------------------------------------------------
