@@ -169,7 +169,11 @@ def RETURN_circle(circle, color):
     where the color is either a string that Rosegraphics understands
     or a rg.Color object.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+
+    circle2 = rg.Circle(rg.Point(circle.center.x, circle.center.y), circle.radius)
+    circle2.fill_color = color
+    return circle2
+    # Done: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
@@ -299,9 +303,11 @@ def MUTATE_circle(circle, color, n):
     This function must NOT return anything (other than the default None).
 
     Precondition: The first argument is a rg.Circle and the second
-                  argument is a color appropriate for Zellegraphics.
+                  argument is a color appropriate for rosegraphics.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    circle.fill_color = color
+    circle.center.x = circle.center.x + n
+    # Done: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
